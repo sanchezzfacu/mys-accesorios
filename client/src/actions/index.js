@@ -29,3 +29,13 @@ export function getProducts() {
         })
     }
 }
+
+export function getDetails(id) {
+    return async function(dispatch) {
+        let json = await axios.get('http://localhost:3001/client-detail/' + id)
+        return dispatch({
+            type: 'GET_DETAILS',
+            payload: json.data
+        })
+    }
+}

@@ -29,6 +29,14 @@ module.exports = (sequelize) => {
     totalSpent: {
         type: DataTypes.INTEGER,
         allowNull: true
+    },
+    debt: {
+      type: DataTypes.ENUM('true', 'false'),
+      allowNull: false,
+    },
+    debtPrice: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   },{ timestamps: false });
 };

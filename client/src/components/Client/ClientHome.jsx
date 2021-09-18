@@ -14,19 +14,25 @@ function ClientHome() {
     
     return (
         <div>
+            <select>
+                <option>Deudores</option>
+                <option>Maximas ventas</option>
+            </select>
             <SearchBarClient/>
             <div>
                 {
                     clients.map(el => {
                         return (
-                            <div>
-                                <ClientCard 
-                                    name={el.name.toUpperCase()} 
-                                    phone={el.phone} 
-                                    buyDay={el.buyDay} 
-                                    totalSpent={el.totalSpent}
-                                    products={el.products.map(el => el.product.toString())}
-                                />
+                            <div key={el.id}>
+                                <a href={'/detail/' + el.id}>
+                                    <ClientCard 
+                                        name={el.name.toUpperCase()} 
+                                        phone={el.phone} 
+                                        buyDay={el.buyDay} 
+                                        totalSpent={el.totalSpent}
+                                        products={el.products.map(el => el.product.toString())}
+                                    />
+                                </a>
                             </div>
                         )
                     })

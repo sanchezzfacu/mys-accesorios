@@ -4,15 +4,20 @@ const productsRoute = require('./product')
 const productCreate = require('./products')
 const clientsRoute = require('./client')
 const clientCreate = require('./clients')
+const clientDetail = require('./clientDetail')
 
 const router = Router();
 
-// Configurar los routers
+// Endpoints para client
 router.use('/client', clientsRoute)
-router.use('/product', productsRoute)
-router.use('/create-client', clientCreate)
-router.use('/create-product', productCreate )
+router.use('/client-detail', clientCreate)
+router.use('/client-create', productCreate )
+router.use('/client-detail', clientDetail)
 
-module.exports = router
+// Endpoints para product
+router.use('/product', productsRoute)
+
+
+module.exports = router;
     
 
