@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { getProductByName } from '../redux/actions'
 import { useDispatch } from 'react-redux'
- 
+import '../styles/Searchbar.css' 
+
 function Searchbar() {
     const [input, setInput] = useState('')
     const dispatch = useDispatch()
@@ -16,9 +17,9 @@ function Searchbar() {
     }
     
     return (
-        <div>
+        <div className='searchbar'>
             <input 
-            placeholder='Buscar producto'
+            placeholder='Buscar producto...'
                 type='text'
                 onChange={handleInputChange}
             />

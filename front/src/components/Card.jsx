@@ -1,11 +1,12 @@
 import React from 'react'
+import '../styles/Card.css'
 
 function Card({product, price, img}) {
     return (
-        <div>
+        <div className='card__container'>
             <img src={img} alt="" height="200px"/>
-            <h1>{product}</h1>
-            <h2>{price}</h2>
+            <h2>{product}</h2>
+            <h3>${price}</h3>
         </div>
     )
 }

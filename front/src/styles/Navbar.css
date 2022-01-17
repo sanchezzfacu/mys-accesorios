@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+}
+
+nav {
+    height: 70px;
+    background-color: #84DFDF;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.796);
+}

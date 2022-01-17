@@ -4,6 +4,7 @@ import { getProducts } from '../redux/actions'
 import Searchbar from './Searchbar'
 import Navbar from './Navbar'
 import Card from './Card'
+import '../styles/Home.css'
 
 function Home() {
     const dispatch = useDispatch()
@@ -14,20 +15,20 @@ function Home() {
     },[dispatch])
 
     return (
-        <div>
+        <div className='container'>
             <Navbar/>
             <Searchbar/>
-            <h1>Home</h1>
-
+            <div className='align__card'>
             {
                 products.map(el => {
                     return (
-                        <div key={el.id}>
+                        <div className='card__home' key={el.id}>
                             <Card img={el.img} product={el.product} price={el.price}/>
                         </div>
                     )
                 })
             }
+            </div>
         </div>
     )
 }

@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    background-color: rgb(167, 197, 221);
+}
+
+.card__home {
+    text-align: center;
+}
+
+.align__card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
