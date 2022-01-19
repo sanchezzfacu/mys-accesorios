@@ -20,4 +20,16 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/:id', async (req, res) => {
+    const { id } = req.params;
+    let info = await getInfo()
+
+    if(id) {
+        let productId = await info.filter(el => el.id == id) 
+        productId.length ? 
+        res.status(200).json(productId) :
+        res.status(404).send('No encontrado')
+    }
+})
+
 module.exports = router;

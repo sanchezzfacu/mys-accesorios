@@ -16,11 +16,11 @@ module.exports = (sequelize) => {
     }, 
     img: {
         type: DataTypes.STRING(1000),  
-        allowNull: false
+        allowNull: true
     },
     description: {
         type: DataTypes.STRING(1000),
-        allowNull: false
+        allowNull: true
     },
     quantity: {
         type: DataTypes.INTEGER,

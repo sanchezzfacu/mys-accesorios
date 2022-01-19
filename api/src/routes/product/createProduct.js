@@ -4,6 +4,8 @@ const { Category, Product } = require('../../db')
 router.post('/', async (req,res) => {
     let {
         product,
+        img,
+        description,
         quantity,
         price,
         category
@@ -11,12 +13,19 @@ router.post('/', async (req,res) => {
 
     let productCreated = await Product.create({
         product,
+        img,
+        description,
         quantity,
         price,
         category
     })
-    productCreated()
-    res.status(200).send('ok')
+    try {
+        res.status(200).send('Producto creado')
+    } 
+
+    catch {
+        res.status(400).send('Error')
+    }
     // let categoryType = await Category.findAll({
     //     where : {name:category}
     // })

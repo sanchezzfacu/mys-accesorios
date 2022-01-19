@@ -5,6 +5,7 @@
 }
 
 .container {
+    height: 100vh;
     background-color: rgb(167, 197, 221);
 }
 

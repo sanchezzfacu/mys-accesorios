@@ -19,3 +19,20 @@ export function getProductByName(name) {
         })
     }
 }
+
+export function getDetails(id) {
+    return async function(dispatch) {
+        let json = await axios.get('http://localhost:3001/product/' + id)
+        return dispatch({
+            type: 'GET_DETAILS',
+            payload: json.data
+        })
+    }
+}
+
+export function createProduct(payload) {
+    return async function(dispatch) {
+        const json = await axios.post("http://localhost:3001/createproduct", payload)
+        return json
+    }
+}
