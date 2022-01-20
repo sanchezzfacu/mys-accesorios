@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { createProduct } from '../redux/actions'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { createProduct, getCategories } from '../redux/actions'
 import '../styles/CrearProducto.css'
 
 function CrearProducto() {
     const dispatch = useDispatch()
+    const categories = useSelector(state => state.categories)
     const [input, setInput] = useState({
         product: "",
         img: "",
@@ -32,6 +33,10 @@ function CrearProducto() {
             description: "",
         })
     }
+
+    useEffect(() => {
+        dispatch(getCategories())
+    },[dispatch])
 
     return (
         <div className='form__container'>
@@ -89,6 +94,17 @@ function CrearProducto() {
                     onChange={handleInputChange}
                     required
                 />
+                <br/>
+
+                <select>
+                    {
+                        categories.map(el => {
+                            return (
+                                <option key={el.id} value={el.name} >{el.name.toUpperCase()}</option>
+                            )
+                        })
+                    }
+                </select>
                 <br/>
 
                 <button>Publicar</button>

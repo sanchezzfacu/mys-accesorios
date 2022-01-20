@@ -7,6 +7,7 @@ const productCreate = require('./product/createProduct')
 
 //CATEGORY
 const categoryRoute = require('./category/categories')
+const categoryCreate = require('./category/createCategory')
 
 ////////////////////////////////////////////////////////////
 
@@ -16,8 +17,7 @@ router.use('/createproduct', productCreate)
 
 //Endpoints para category
 router.use('/category', categoryRoute)
+router.use('/createcategory', categoryCreate)
 
 
 module.exports = router;
-    
-

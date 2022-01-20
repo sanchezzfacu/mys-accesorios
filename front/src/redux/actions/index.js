@@ -36,3 +36,13 @@ export function createProduct(payload) {
         return json
     }
 }
+
+export function getCategories() {
+    return async function(dispatch) {
+        const json = await axios.get("http://localhost:3001/category")
+        return dispatch({
+            type:"GET_CATEGORIES",
+            payload: json.data
+        })
+    }
+}

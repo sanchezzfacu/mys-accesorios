@@ -1,18 +1,25 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../db')
+const { Categories } = require('../../db')
 
 router.post('/', async (req,res) => {
-    let {
-        category,
-        img
-    } = req.body
+    try {
+        let {
+            name,
+            img
+        } = req.body
+        let total = req.body
+        console.log(total)
 
-    let categoryCreated = await Category.create({
-        category,
-        img
-    })
-    
-    res.send('Categoria creada satisfactoriamente')
+        let categoryCreated = await Categories.create({
+            name,
+            img
+        })
+        res.status(200).send('Categoria creada satisfactoriamente')
+    }
+
+    catch {
+        res.status(400).send('Error')
+    }
 })
 
 module.exports = router;
