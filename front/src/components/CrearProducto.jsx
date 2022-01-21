@@ -12,6 +12,7 @@ function CrearProducto() {
         price: "",
         quantity: "",
         description: "",
+        category: []
     })
 
     function handleInputChange(e) {
@@ -31,6 +32,14 @@ function CrearProducto() {
             price: "",
             quantity: "",
             description: "",
+            category: []
+        })
+    }
+
+    function handleSelect(e) {
+        setInput({
+            ...input,
+            category: [...input.category, e.target.value]
         })
     }
 
@@ -96,7 +105,7 @@ function CrearProducto() {
                 />
                 <br/>
 
-                <select>
+                <select onChange={handleSelect}>
                     {
                         categories.map(el => {
                             return (

@@ -37,6 +37,13 @@ export function createProduct(payload) {
     }
 }
 
+export function createCategory(payload) {
+    return async function(dispatch) {
+        const json = await axios.post("http://localhost:3001/createcategory", payload)
+        return json
+    }
+}
+
 export function getCategories() {
     return async function(dispatch) {
         const json = await axios.get("http://localhost:3001/category")

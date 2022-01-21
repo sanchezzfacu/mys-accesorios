@@ -15,3 +15,7 @@ nav {
     background-color: #84DFDF;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.796);
 }
+
+.logo__nav {
+    padding-top: 5px;
+}
