@@ -15,6 +15,14 @@
     padding-left: 15px;
 }
 
+.card__container h3 {
+    color: #222222;
+}
+
+.card__container h4 {
+    color: #444444;
+}
+
 .card__container img {
     border-top-left-radius: 4px ;
     border-top-right-radius: 4px ;
