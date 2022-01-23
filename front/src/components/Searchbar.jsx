@@ -22,9 +22,11 @@ function Searchbar() {
             placeholder='Buscar producto...'
                 type='text'
                 onChange={handleInputChange}
+                spellCheck="false"
             />
             <button
                 onClick={handleSubmit}
+                type='submit'
             >Buscar</button>
         </div>
     )

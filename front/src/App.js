@@ -5,6 +5,8 @@ import Details from './components/Details';
 import CrearProducto from './components/CrearProducto';
 import CrearCategoria from './components/CrearCategoria'
 import PanelAdmin from './components/PanelAdmin';
+import Direccion from './components/Direccion';
+import Redes from './components/Redes';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/publicar" element={<CrearProducto/>}/>
         <Route path="/crearcategoria" element={<CrearCategoria/>} />
         <Route path="/paneladmin" element={<PanelAdmin/>}/>
+        <Route path="/direccion" element={<Direccion/>}/>
+        <Route path="/redes" element={<Redes/>}/>
       </Routes>
     </Router>
   );

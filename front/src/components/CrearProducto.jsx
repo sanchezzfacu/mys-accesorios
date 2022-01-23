@@ -58,6 +58,7 @@ function CrearProducto() {
                     name="product"
                     onChange={handleInputChange}
                     required
+                    spellCheck='false'
                 />
                 <br/>
 
@@ -68,6 +69,7 @@ function CrearProducto() {
                     name="img"
                     onChange={handleInputChange}
                     required
+                    spellCheck='false'
                 />
                                 
                 <br/>
@@ -80,6 +82,7 @@ function CrearProducto() {
                     name="quantity"
                     onChange={handleInputChange}
                     required
+                    spellCheck='false'
                 />
                
                 <br/>
@@ -91,6 +94,7 @@ function CrearProducto() {
                     name="price"
                     onChange={handleInputChange}
                     required
+                    spellCheck='false'
                 />
                 
                 <br/>
@@ -102,6 +106,7 @@ function CrearProducto() {
                     name="description"
                     onChange={handleInputChange}
                     required
+                    spellCheck='false'
                 />
                 <br/>
 

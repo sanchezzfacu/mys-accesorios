@@ -5,13 +5,8 @@
 
 .container__details__items {
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 20px;
-    flex-direction: row;
 }
-
-
 
 @media screen and (min-width: 320px) {
     .container__details__items {
@@ -24,12 +19,43 @@
         border-radius: 7px;
         border: 1px solid #00000075;
         height: 350px;
-        
     }
 
+    .img__details {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    
     .btn__inicio {
         height: 30px;
         width: 50px;
+        background-color: #84DFDF;
+        border: 1px solid #000000;
+        font-weight: 900;
+        cursor: pointer;
+    }
+
+    .btn__comprar {
+        height: 35px;
+        width: 80%;
+        background-color: #84DFDF;
+        border: 1px solid #000000;
+        font-weight: 900;
+        cursor: pointer;
+    }
+
+    .detail__items {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .detail__items a{
+        display: flex;
+        justify-content: center;
     }
 }
 

@@ -4,6 +4,7 @@ import { getProducts } from '../redux/actions'
 import Searchbar from './Searchbar'
 import Navbar from './Navbar'
 import Card from './Card'
+import Footer from './Footer'
 import '../styles/Home.css'
 
 function Home() {
@@ -31,6 +32,7 @@ function Home() {
                 })
             }
             </div>
+            <Footer/>
         </div>
     )
 }
