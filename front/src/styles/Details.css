@@ -57,6 +57,20 @@
         display: flex;
         justify-content: center;
     }
+
+    .description {
+        padding-bottom: 20px;
+        padding-right: 5px;
+    }
+
+    .price {
+        padding-bottom: 20px;
+    }
+
+    .product {
+        padding-bottom: 20px;
+        
+    }
 }
 
 @media screen and (min-width: 950px) {
@@ -66,6 +80,7 @@
         justify-content: center;
         flex-direction: row;
         text-align: start;
+        padding-right: 70px;
     }
 
     .img__details img {
@@ -78,5 +93,6 @@
 
     .img__details {
         padding-right: 70px;
+        padding-left: 70px;
     }
 }

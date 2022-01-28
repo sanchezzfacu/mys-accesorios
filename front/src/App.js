@@ -7,6 +7,7 @@ import CrearCategoria from './components/CrearCategoria'
 import PanelAdmin from './components/PanelAdmin';
 import Direccion from './components/Direccion';
 import Redes from './components/Redes';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/paneladmin" element={<PanelAdmin/>}/>
         <Route path="/direccion" element={<Direccion/>}/>
         <Route path="/redes" element={<Redes/>}/>
+        <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     </Router>
   );

@@ -14,6 +14,9 @@
 }
 
 .searchbar button {
+    background-color: #84DFDF;
+    border: 1px solid #000000;
+    font-weight: 400;
     cursor: pointer;
     width: 60px;
 }

@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/PanelAdmin.css'
 
 function PanelAdmin() {
     return (
-        <div>
+        <div className='admin__container'>
             <h1>Panel de Abi Sanchez</h1>
             <a href="/home"><button>Menu principal</button></a>
             <a href="/crearcategoria"><button>Crear categoria</button></a>

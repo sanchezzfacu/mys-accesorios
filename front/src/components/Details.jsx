@@ -23,7 +23,7 @@ function Details() {
             <nav>
                 <Navbar/>
             </nav>
-            <a className='btn__volver' href="/home"><button className='btn__inicio' >Inicio</button></a>
+            <a className='btn__volver' href="/home"><button className='btn__inicio' >Volver</button></a>
             {
                 product ? product.map(el => {
                     return (
@@ -33,12 +33,9 @@ function Details() {
                                     <img src={el.img} alt="Imagen no encontrada" height="400px"/>
                                 </div>
                                 <div className='detail__items'>
-                                    <h2>{el.product}</h2>
-                                    <br />
-                                    <h3>{el.description}</h3>
-                                    <br /><br />
-                                    <h2>${el.price}</h2>
-                                    <br /><br />
+                                    <h2 className='product'>{el.product}</h2>
+                                    <h3 className='description'>{el.description}</h3>
+                                    <h2 className='price'>${el.price}</h2>
                                     <a href={wpp} target='_blank' rel="noopener noreferrer" ><button className='btn__comprar'>Comprar</button></a>
                                 </div>
                             </div>

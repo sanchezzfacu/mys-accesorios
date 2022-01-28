@@ -10,6 +10,7 @@ import '../styles/Home.css'
 function Home() {
     const dispatch = useDispatch()
     const products = useSelector(state => state.products)
+    products.reverse()
 
     useEffect(() => {
         dispatch(getProducts())
@@ -25,7 +26,7 @@ function Home() {
                     return (
                         <div className='card__home' key={el.id}>
                             <a href={'/details/'+ el.id}>
-                                <Card img={el.img} product={el.product} price={el.price}/>
+                                <Card img={el.img} product={el.product} price={el.price} stock={el.quantity} />
                             </a>
                         </div>
                     )
