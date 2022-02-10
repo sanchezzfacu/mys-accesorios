@@ -6,7 +6,6 @@ import Navbar from './Navbar'
 import Card from './Card'
 import Footer from './Footer'
 import '../styles/Home.css'
-
 function Home() {
     const dispatch = useDispatch()
     const products = useSelector(state => state.products)

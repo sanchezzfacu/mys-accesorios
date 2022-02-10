@@ -3,14 +3,18 @@
     padding-left: 30px;
     height: 30px;
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
     font-family: 'Roboto Condensed', sans-serif;
+    border-right: none;
 }
 
 .searchbar {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    height: 30px;
 }
 
 .searchbar button {
@@ -20,3 +24,52 @@
     cursor: pointer;
     width: 60px;
 }
+
+.modal-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:aqua;
+    width:800px;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+}
+
+.modal {
+    background-color: #0000005f;
+    position:fixed;
+    display: flex;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+}
+
+#miModal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cerrar-modal {
+    position: relative;
+    left: 49%;
+    bottom: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.cerrar-modal a {
+    /* position: relative; */
+    background-color: #e22121;
+    color: #ffffff;
+    background-size: 120px;
+    width: 20px;
+    height: 20px;
+}    
