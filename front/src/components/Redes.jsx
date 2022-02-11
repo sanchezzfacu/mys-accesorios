@@ -1,5 +1,5 @@
 import React from 'react'
-import ig from '../logoig.png'
+import ig from '../img/logoig.png'
 
 function Redes() {
     return (

@@ -1,7 +1,7 @@
 import React from 'react'
-import ig from '../logoig.png'
-import fb from '../logofb.png'
-import wpp from '../logowpp.png'
+import ig from '../img/logoig.png'
+import fb from '../img/logofb.png'
+import wpp from '../img/logowpp.png'
 import '../styles/Footer.css'
 
 function Footer() {

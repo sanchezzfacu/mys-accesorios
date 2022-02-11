@@ -33,8 +33,6 @@
     background-color:aqua;
     width:800px;
     padding: 10px 20px;
-    margin: 20% auto;
-    position: relative;
 }
 
 .modal {
@@ -49,6 +47,13 @@
     pointer-events:none;
 }
 
+#miModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
 #miModal:target {
     opacity: 1;
     pointer-events: auto;
@@ -57,7 +62,7 @@
 .cerrar-modal {
     position: relative;
     left: 49%;
-    bottom: 33%;
+    bottom: 63%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +74,76 @@
     /* position: relative; */
     background-color: #e22121;
     color: #ffffff;
-    background-size: 120px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }    
+
+.searchbar a {
+    padding-left: 10px;
+}
+
+.detail-items label input {
+    height: 20px;
+}
+
+.detail-items label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.btn-filter {
+    height: 30px;
+}
+
+@media screen and (min-width: 320px) {
+    .searchbar {
+        padding-left: 10px;
+    }
+    .searchbar input {
+        padding-left: 15px;
+    };
+    .btn-filter {
+        padding-right: 15px;
+    }
+    .detail-items label input {
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px;
+    }
+    label {
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .modal-contenido {
+        width: 500px;
+    }
+}
+
+.modal-btn {
+    margin: 20px;
+}
+
+.modal-btn button{
+    height: 30px;
+}
+
+.modal-title {
+    padding-bottom: 10px;
+}
+
+.detail-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}

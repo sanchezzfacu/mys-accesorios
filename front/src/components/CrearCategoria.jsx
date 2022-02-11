@@ -6,7 +6,6 @@ function CrearCategoria() {
     const dispatch = useDispatch()
     const [input, setInput] = useState({
         name: "",
-        img: ""
     })
 
     function handleInputChange(e) {
@@ -22,7 +21,6 @@ function CrearCategoria() {
         alert('Categoria creada')
         setInput({
             name: "",
-            img: ""
         })
     }
 
@@ -32,12 +30,6 @@ function CrearCategoria() {
                 <input
                     name="name"
                     placeholder='Categoria..'
-                    type='text'
-                    onChange={handleInputChange}
-                />
-                <input
-                    name="img"
-                    placeholder='Imagen..'
                     type='text'
                     onChange={handleInputChange}
                 />

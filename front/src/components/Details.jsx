@@ -27,7 +27,7 @@ function Details() {
             {
                 product ? product.map(el => {
                     return (
-                        <div key={el.id}>
+                        <div className='content-height' key={el.id}>
                             <div className='container__details__items'>
                                 <div className='img__details'>
                                     <img src={el.img} alt="Imagen no encontrada" height="400px"/>
@@ -39,7 +39,9 @@ function Details() {
                                     <a href={wpp} target='_blank' rel="noopener noreferrer" ><button className='btn__comprar'>Comprar</button></a>
                                 </div>
                             </div>
-                        <Footer/>
+                            <div className='footer-container'>
+                                <Footer/>
+                            </div>
                         </div>
                     )
                 }) :
