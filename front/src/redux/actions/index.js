@@ -1,8 +1,18 @@
 import axios from 'axios'
+import {
+    ALL_PRODUCTS,
+    ALL_CATEGORIES,
+    PRODUCT_BY_NAME,
+    DETAIL_PRODUCT,
+    CREATE_PRODUCT,
+    CREATE_CATEGORY
+} from '../../constantes'
+
 
 export function getProducts() {
     return async function(dispatch) {
-        let json = await axios.get('http://localhost:3001/product')
+        console.log(ALL_PRODUCTS)
+        let json = await axios.get(ALL_PRODUCTS)
         return dispatch({
             type: 'GET_PRODUCTS',
             payload: json.data
@@ -12,7 +22,7 @@ export function getProducts() {
 
 export function getProductByName(name) {
     return async function(dispatch) {
-        let json = await axios.get('http://localhost:3001/product?name=' + name)
+        let json = await axios.get(PRODUCT_BY_NAME + name)
         return dispatch({
             type: 'GET_PRODUCT_BY_NAME',
             payload: json.data
@@ -22,7 +32,7 @@ export function getProductByName(name) {
 
 export function getDetails(id) {
     return async function(dispatch) {
-        let json = await axios.get('http://localhost:3001/product/' + id)
+        let json = await axios.get(DETAIL_PRODUCT + id)
         return dispatch({
             type: 'GET_DETAILS',
             payload: json.data
@@ -32,21 +42,21 @@ export function getDetails(id) {
 
 export function createProduct(payload) {
     return async function(dispatch) {
-        const json = await axios.post("http://localhost:3001/createproduct", payload)
+        const json = await axios.post(CREATE_PRODUCT, payload)
         return json
     }
 }
 
 export function createCategory(payload) {
     return async function(dispatch) {
-        const json = await axios.post("http://localhost:3001/createcategory", payload)
+        const json = await axios.post(CREATE_CATEGORY, payload)
         return json
     }
 }
 
 export function getCategories() {
     return async function(dispatch) {
-        const json = await axios.get("http://localhost:3001/category")
+        const json = await axios.get(ALL_CATEGORIES)
         return dispatch({
             type:"GET_CATEGORIES",
             payload: json.data

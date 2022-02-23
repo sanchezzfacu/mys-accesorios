@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../redux/actions'
+import { Oval } from 'react-loader-spinner'
 import Searchbar from './Searchbar'
 import Navbar from './Navbar'
 import Card from './Card'
@@ -21,7 +22,7 @@ function Home() {
             <Searchbar/>
             <div className='align__card'>
             {
-                products.map(el => {
+                products ? products.map(el => {
                     return (
                         <div className='card__home' key={el.id}>
                             <a href={'/details/'+ el.id}>
@@ -29,7 +30,15 @@ function Home() {
                             </a>
                         </div>
                     )
-                })
+                }) : 
+                <div className='loading-spinner'>
+                    <Oval
+                        heigth="100"
+                        width="100"
+                        color='grey'
+                        ariaLabel='loading'
+                    />
+                </div>
             }
             </div>
             <Footer/>

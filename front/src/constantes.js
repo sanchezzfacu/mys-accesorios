@@ -1,0 +1,7 @@
+export const BASE_URL = '/'
+export const ALL_PRODUCTS = BASE_URL + 'product'
+export const ALL_CATEGORIES = BASE_URL + 'category'
+export const PRODUCT_BY_NAME = BASE_URL + 'product?name='
+export const DETAIL_PRODUCT = BASE_URL + 'product/'
+export const CREATE_PRODUCT = BASE_URL + 'createproduct'
+export const CREATE_CATEGORY = BASE_URL + 'createcategory'
