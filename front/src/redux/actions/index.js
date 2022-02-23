@@ -11,7 +11,6 @@ import {
 
 export function getProducts() {
     return async function(dispatch) {
-        console.log(ALL_PRODUCTS)
         let json = await axios.get(ALL_PRODUCTS)
         return dispatch({
             type: 'GET_PRODUCTS',
