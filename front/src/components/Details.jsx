@@ -10,7 +10,7 @@ function Details() {
     const dispatch = useDispatch()
     const product = useSelector(state => state.details)
     const { id } = useParams()
-    const baseUrl =  process.env.REACT_APP_API + '/product/' + id
+    const baseUrl =  'https://mys-accesorios.vercel.app/details/' + id
     // eslint-disable-next-line
     const [wpp, _setWpp] = useState('https://wa.me/543876396788?text=Buenas, quiero mas informacion de este producto ' + baseUrl)
 
