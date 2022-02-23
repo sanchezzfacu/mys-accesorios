@@ -5,13 +5,12 @@ import { useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../styles/Details.css'
-import { DETAIL_PRODUCT } from '../constantes'
 
 function Details() {
     const dispatch = useDispatch()
     const product = useSelector(state => state.details)
     const { id } = useParams()
-    const baseUrl =  DETAIL_PRODUCT + id
+    const baseUrl =  process.env.REACT_APP_API + '/product/' + id
     // eslint-disable-next-line
     const [wpp, _setWpp] = useState('https://wa.me/543876396788?text=Buenas, quiero mas informacion de este producto ' + baseUrl)
 
