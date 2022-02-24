@@ -25,14 +25,14 @@ function ManageProducts() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type='text'
-                    onChange={handleInput}
-                />
-                <button>Buscar</button>
-            </form>
+        <div className='manage-container'>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type='text'
+                        onChange={handleInput}
+                    />
+                    <button>Buscar</button>
+                </form>
             <div className='item-container'>  
                 {
                     products ? products.map(el => {

@@ -14,3 +14,15 @@
     padding-bottom: 15px;
     width: 200px;
 }
+
+.manage-container form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.manage-container form button {
+    height: 40px;
+    box-sizing: border-box;
+}
