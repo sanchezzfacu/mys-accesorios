@@ -1,0 +1,16 @@
+.item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: #BBECE8;
+    margin: 5px;
+    border-radius: 10px 10px ;
+    padding-bottom: 15px;
+    width: 200px;
+}

@@ -8,6 +8,7 @@ function PanelAdmin() {
             <a href="/home"><button>Menu principal</button></a>
             <a href="/crearcategoria"><button>Crear categoria</button></a>
             <a href="/publicar"><button>Crear producto</button></a>
+            <a href="/administrarproductos"><button>Administrar productos</button></a>
         </div>
     )
 }

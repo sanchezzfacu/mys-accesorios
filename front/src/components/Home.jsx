@@ -10,7 +10,6 @@ import '../styles/Home.css'
 function Home() {
     const dispatch = useDispatch()
     const products = useSelector(state => state.products)
-    products.reverse()
 
     useEffect(() => {
         dispatch(getProducts())
