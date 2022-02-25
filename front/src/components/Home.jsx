@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import * as Spinner from 'react-bootstrap'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../redux/actions'
 import Searchbar from './Searchbar'
