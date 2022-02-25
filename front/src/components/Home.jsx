@@ -11,7 +11,7 @@ function Home() {
     const dispatch = useDispatch()
     const products = useSelector(state => state.products)
 // eslint-disable-next-line
-    const [loading, setLoading] = useState(false)
+    // const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         dispatch(getProducts())
@@ -23,7 +23,7 @@ function Home() {
             <Searchbar/>
             <div className='align__card'>
             {
-                products.length ? products.map(el => {
+                products ? products.map(el => {
                     return (
                         <div className='card__home' key={el.id}>
                             <a href={'/details/'+ el.id}>
@@ -31,10 +31,11 @@ function Home() {
                             </a>
                         </div>
                     )
-                }) : 
-                <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>
+                }) :
+                <div/> 
+                // <Spinner animation="border" role="status">
+                //     <span className="visually-hidden">Loading...</span>
+                // </Spinner>
             }
             </div>
             <Footer/>
