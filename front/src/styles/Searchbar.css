@@ -99,6 +99,7 @@
 
 .btn-filter {
     height: 30px;
+    margin-right: 5px;
 }
 
 @media screen and (min-width: 320px) {
