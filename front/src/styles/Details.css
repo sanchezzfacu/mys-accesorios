@@ -38,7 +38,7 @@
 
     .btn__comprar {
         height: 35px;
-        width: 80%;
+        width: 100%;
         background-color: #84DFDF;
         border: 1px solid #000000;
         font-weight: 900;
@@ -107,7 +107,9 @@
         align-items: center;
         justify-content: center;
         height: 35px;
-        width: 500px;
+        width: 80%;
+        border: 1px solid #000000;
+        border-radius: 5px;
     }
     .product, .price, .description {
         margin: 25px;

@@ -1,3 +1,23 @@
-.error__container img{
+.error__container{
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.error__container h1 {
+    text-align: center;
+}
+
+.btn-error, .error__container h1 {
+    margin: 25px;
+}
+
+.btn-error {
+    background-color: aqua;
+    border: none;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 10px;
 }

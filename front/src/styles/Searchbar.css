@@ -7,7 +7,7 @@
     border-left: 1px solid #000000;
     border-bottom: 1px solid #000000;
     font-family: 'Roboto Condensed', sans-serif;
-    border-radius: 50px 0px  0px 50px    ;
+    border-radius: 10px 0px  0px 10px    ;
     border-right: none;
     box-sizing: border-box;
 }
@@ -27,7 +27,7 @@
     cursor: pointer;
     width: 60px;
     border-left: none;
-    border-radius: 0px 50px 50px 0px ;
+    border-radius: 0px 10px 10px 0px ;
 }
 
 .modal-contenido {
@@ -38,6 +38,7 @@
     background-color:aqua;
     width:800px;
     padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .modal {
@@ -145,6 +146,10 @@
 
 .modal-btn button{
     height: 30px;
+    background-color: #84DFDF;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 80px;
 }
 
 .modal-title {
