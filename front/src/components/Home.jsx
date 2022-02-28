@@ -37,7 +37,9 @@ function Home() {
                 // </Spinner>
             }
             </div>
-            <Footer/>
+            <div className='footer-container'>
+                <Footer/>
+            </div>
         </div>
     )
 }

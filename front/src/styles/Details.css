@@ -1,6 +1,10 @@
 .container__details__route {
     background-color: rgb(167, 197, 221);
-    height: 100vh;
+}
+
+.content-height {
+    height: calc(100vh - 70px);
+    
 }
 
 .container__details__items {
