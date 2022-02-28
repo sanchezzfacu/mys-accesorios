@@ -1,8 +1,8 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
@@ -32,4 +32,8 @@ body {
         padding-right: 120px;   
         justify-content: center;
     }
+}
+
+.container-home {
+    height: 880px;
 }

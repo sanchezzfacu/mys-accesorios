@@ -3,7 +3,8 @@ import { getCategories, getProductByName } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import '../styles/Searchbar.css' 
 import filter from '../img/filter.png'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 function Searchbar() {
     const [input, setInput] = useState('')
     const dispatch = useDispatch()
@@ -31,10 +32,16 @@ function Searchbar() {
                 spellCheck="false"
             />
             <button
+                className='btn-container'
                 onClick={handleSubmit}
-                type='submit'
-            >Buscar</button>
-                <a href="#miModal"><button className='btn-filter'><img src={filter} height='30PX' alt="" /></button></a> 
+                type='submit' >                
+                <FontAwesomeIcon className='btn-search' icon={faSearch} />
+            </button>
+                <a href="#miModal">
+                    <button className='btn-filter'>
+                        <img src={filter} height='30PX' alt="" />
+                    </button>
+                </a> 
                 <div id='miModal' className='modal'>
                     <div className="modal-contenido">
                         <div className="cerrar-modal">

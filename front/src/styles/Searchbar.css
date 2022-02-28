@@ -1,28 +1,33 @@
 .searchbar input {
-    width: 70%;
+    width: 65%;
     padding-left: 30px;
-    height: 30px;
+    height: 35px;
     outline: none;
-    border-top: 1px solid rgb(0, 0, 0);
-    border-left: 1px solid rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-bottom: 1px solid #000000;
     font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 50px 0px  0px 50px    ;
     border-right: none;
+    box-sizing: border-box;
 }
 
 .searchbar {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     height: 30px;
+    margin-bottom: 20px;
 }
 
-.searchbar button {
-    background-color: #84DFDF;
+.btn-container {
+    background-color: #ffffff;
+    height: 35px;
     border: 1px solid #000000;
-    font-weight: 400;
     cursor: pointer;
     width: 60px;
+    border-left: none;
+    border-radius: 0px 50px 50px 0px ;
 }
 
 .modal-contenido {
@@ -71,14 +76,14 @@
 }
 
 .cerrar-modal a {
+    /* position: relative; */
     background-color: #e22121;
     color: #ffffff;
     width: 25px;
     height: 25px;
     border-radius: 50px;
     display: flex;
-    align-items: center;
-    text-align: center;
+    padding-left: 20px;
 }    
 
 .searchbar a {
@@ -96,10 +101,15 @@
     justify-content: space-between;
 }
 
-
 .btn-filter {
-    height: 30px;
-    margin-right: 5px;
+    background-color: #84DFDF;
+    border: 1px solid #000;
+    border-radius: 10px;
+    height: 35px;
+}
+
+.btn-filter img {
+    width: 37px;
 }
 
 @media screen and (min-width: 320px) {
@@ -123,7 +133,7 @@
     }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 501px) {
     .modal-contenido {
         width: 500px;
     }

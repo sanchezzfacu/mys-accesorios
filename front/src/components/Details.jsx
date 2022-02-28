@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrow } from '@fortawesome/free-solid-svg-icons'
+
 import '../styles/Details.css'
 
 function Details() {
@@ -21,7 +24,7 @@ function Details() {
     return (
         <div className='container__details__route'>
                 <Navbar/>
-            <a className='btn__volver' href="/home"><button className='btn__inicio' >Volver</button></a>
+            <a className='btn__volver' href="/home"><button className='btn__inicio' ><FontAwesomeIcon icon="fa-solid fa-arrow-left" /></button></a>
             {
                 product ? product.map(el => {
                     return (
