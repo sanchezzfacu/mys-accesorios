@@ -20,9 +20,7 @@ function Details() {
     
     return (
         <div className='container__details__route'>
-            <nav>
                 <Navbar/>
-            </nav>
             <a className='btn__volver' href="/home"><button className='btn__inicio' >Volver</button></a>
             {
                 product ? product.map(el => {

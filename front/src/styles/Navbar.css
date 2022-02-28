@@ -7,13 +7,13 @@ ul {
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0)
+    color: #000000
 }
 
 nav {
     height: 70px;
     background-color: #84DFDF;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.796);
+    box-shadow: 1px 1px 5px #000000cb;
 }
 
 .logo__nav {

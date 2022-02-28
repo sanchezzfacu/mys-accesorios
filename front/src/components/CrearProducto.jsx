@@ -49,7 +49,7 @@ function CrearProducto() {
 
     return (
         <div className='form__container'>
-            <form onSubmit={handleSubmit}>
+            <form className='form-container' onSubmit={handleSubmit}>
                 <label>Producto</label>
                 <input
                     placeholder='Producto..'

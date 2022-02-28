@@ -17,7 +17,7 @@ function Home() {
     },[dispatch])
 
     return (
-        <div className='container'>
+        <div className='container-home'>
             <Navbar/>
             <Searchbar/>
             <div className='align__card'>

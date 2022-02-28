@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/CardAdmin.css'
 function CardAdmin({product, price, img, stock}) {
     return (
-        <div className='card-container-admin'>
+        <div className='card-admin-container'>
             <div>
                 <img className='card-img' src={img} alt="imagen no disponible"/><br/>
             </div>
