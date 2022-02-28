@@ -9,13 +9,22 @@
     .card__container img {
         width: 180px;
     }
+    .lower-items-card {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .h4-card, .btn-card {
+        display: inline-block;
+        margin: 10px;
+    }
 }
 
 @media screen and (max-width: 390px) {
     .card__container {
         width: 150px;
         margin: 7px;
-        box-sizing: border-box;
         height: auto;
         margin-top: 15px;
     }
