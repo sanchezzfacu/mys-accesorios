@@ -1,4 +1,5 @@
 import React from 'react'
+import buyIcon from '../img/bag-buy.png'
 import '../styles/Card.css'
 
 function Card({product, price, img}) {
@@ -10,7 +11,9 @@ function Card({product, price, img}) {
             </div>
             <div className='lower-items-card'>
                 <h4 className='h4-card'>${price}</h4>
-                <button className='btn-card'>Comprar</button>
+                <button className='btn-card'>
+                    <img src={buyIcon} alt="" />
+                </button>
             </div>
         </div>
     )

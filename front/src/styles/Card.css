@@ -6,7 +6,7 @@
         margin: 7px;
         box-sizing: border-box;
     }   
-    .card__container img {
+    .card__container .img__card {
         width: 180px;
     }
     .lower-items-card {
@@ -49,7 +49,7 @@
         height: 340px;
         margin: 7px;
     }  
-    .card__container img {
+    .card__container .img__card {
         width: 200px;
     }
 
@@ -102,11 +102,17 @@
 }
 
 .card__container button {
-    height: 30px;
+    height: 36px;
     width: 65px;
-    background-color: #24be24;
+    background-color: #84DFDF;
     border: 1px solid #000000;
     color: #ffffff;
     border-radius: 7px;
     box-sizing: border-box;
+    padding-bottom: 5px;
+}
+
+
+.card__container button img {
+    color: #fff;
 }
