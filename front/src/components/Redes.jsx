@@ -11,7 +11,7 @@ function Redes() {
             </div>
             <div className='container-items-redes'>
                 <div className='redes-div'>
-                    <a href="https://www.instagram.com/_mys_accesorios/"><img src={ig} alt=""/></a>
+                    <a href="https://www.instagram.com/_mys_accesorios/"><img className='img-ig' src={ig} alt=""/></a>
                     <h3>Instagram - Mys Accesorios</h3>  
                 </div>
                 <div className='redes-div'>
