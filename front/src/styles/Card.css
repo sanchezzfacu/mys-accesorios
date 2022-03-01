@@ -37,7 +37,7 @@
         font-size: 18px;
     }
 
-    .card__container img {
+    .card__container .img__card {
         height: 170px;
         width: 150px;
         object-fit: cover;

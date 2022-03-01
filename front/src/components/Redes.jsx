@@ -1,12 +1,24 @@
 import React from 'react'
 import ig from '../img/logoig.png'
-
+import fb from '../img/logofb.png'
+// import wpp from '../img/logowpp.png'
+import '../styles/Redes.css'
 function Redes() {
     return (
-        <div>
-            <h1>Seguinos en nuestras redes sociales y no te pierdas nuestras ofertas</h1>
-            <img src={ig} alt="" height='200px' /><a href="https://www.instagram.com/_mys_accesorios/"><span>Instagram</span></a>  
-            <a href="https://www.facebook.com/MyS_accesorios-103511165361163"><span>Facebook</span></a>
+        <div className='redes-container'>
+            <div>
+                <h1 className='redes-header'>Seguinos en nuestras redes sociales y no te pierdas nuestras ofertas</h1>
+            </div>
+            <div className='container-items-redes'>
+                <div className='redes-div'>
+                    <a href="https://www.instagram.com/_mys_accesorios/"><img src={ig} alt=""/></a>
+                    <h3>Instagram - Mys Accesorios</h3>  
+                </div>
+                <div className='redes-div'>
+                    <a href="https://www.facebook.com/MyS_accesorios-103511165361163"><img className='img-fb' src={fb} alt=""/></a>
+                    <h3>Facebook - MyS Accesorios</h3>
+                </div>
+            </div>
         </div>
     )
 }
