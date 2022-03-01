@@ -8,3 +8,20 @@ footer {
     margin-top: 50px;
     box-shadow: 1px 1px 7px #000000;
 }
+
+.ig__item, .fb__item, .wpp__item {
+    margin: 10px;
+} 
+
+.img-footer {
+    height: 30px;
+}
+
+.fb__item {
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.footer-span {
+    text-align: center;
+}
