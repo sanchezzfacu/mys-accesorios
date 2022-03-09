@@ -117,12 +117,10 @@
 .card__container button {
     height: 36px;
     width: 65px;
-    background-color: #12bf77;
+    /* background-color: #6b81c9cb; */
+    background-color: #07fad3;
     border: 1px solid #000000;
-    color: #ffffff;
     border-radius: 7px;
-    box-sizing: border-box;
-    padding-bottom: 5px;
 }
 
 
