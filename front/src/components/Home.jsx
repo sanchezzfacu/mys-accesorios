@@ -14,6 +14,7 @@ function Home() {
 
     useEffect(() => {
         dispatch(getProducts())
+        document.title = 'MyS accesorios'
     },[dispatch])
 
     return (
