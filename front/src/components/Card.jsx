@@ -2,6 +2,7 @@ import React from 'react'
 import buyIcon from '../img/bag-buy.png'
 import '../styles/Card.css'
 
+
 function Card({product, price, img}) {
     return (
         <div className='card__container'>

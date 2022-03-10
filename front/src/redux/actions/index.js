@@ -5,7 +5,8 @@ import {
     PRODUCT_BY_NAME,
     DETAIL_PRODUCT,
     CREATE_PRODUCT,
-    CREATE_CATEGORY
+    CREATE_CATEGORY,
+    DELETE_PRODUCT,
 } from '../../constantes'
 
 
@@ -60,5 +61,12 @@ export function getCategories() {
             type:"GET_CATEGORIES",
             payload: json.data
         })
+    }
+}
+
+export function deleteProduct(id) {
+    return async function(dispatch) {
+        const json = await axios.delete(DELETE_PRODUCT + id)
+        return json
     }
 }

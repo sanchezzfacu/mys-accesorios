@@ -1,20 +1,27 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { deleteProduct } from '../redux/actions'
+
 import '../styles/CardAdmin.css'
-function CardAdmin({product, price, img, stock}) {
+
+function CardAdmin({id, product, price, img, stock}) {
+    const dispatch = useDispatch()
+
+    const handleDeleteProduct = (e) => {
+        dispatch(deleteProduct(e.target.value))
+    }
+
     return (
         <div className='card-admin-container'>
             <div>
-                <img className='card-img' src={img} alt="imagen no disponible"/><br/>
+                <img className='card-img' src={img} alt="imagen no disponible"/>
             </div>
-            <h3>{product.charAt(0).toUpperCase() + product.slice(1).toLowerCase()}</h3>
-            <h3>${price}</h3>
-            <div className='stock-items'>
-                <h3>{stock} unidades</h3>
+            <h3 className='card-name-admin'>{product.charAt(0).toUpperCase() + product.slice(1).toLowerCase()}</h3>
+            <h3 className='card-price-admin'>${price}</h3>
+            <h3 className='card-stock-admin'>{stock} unidades</h3>
+            <div>
                 <button className='btn-minus'>-1</button>
-            </div>
-            <div className=''>
-                <button className='btn-edit'>Editar</button>
-                <button className='btn-delete'>Eliminar</button>
+                <button onClick={handleDeleteProduct} value={id} className='btn-delete'>Eliminar</button>
             </div>
         </div>
     )

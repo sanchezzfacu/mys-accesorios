@@ -30,6 +30,11 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 categories: action.payload
             }
+        
+        case 'DELETE_PRODUCT' : 
+        return {
+            ...state,
+        }    
 
         default :
             return state

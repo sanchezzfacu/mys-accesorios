@@ -1,4 +1,5 @@
 
+
 @media screen and (max-width: 500px) {
     .card__container {
         width: 180px;
@@ -34,7 +35,7 @@
         margin: 7px;
         height: auto;
         margin-top: 15px;
-        font-size: 10px;
+        font-size: 5px;
     }
 
     .card__container .item-name-card h3 {

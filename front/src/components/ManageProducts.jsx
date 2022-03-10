@@ -38,7 +38,7 @@ function ManageProducts() {
                     products ? products.map(el => {
                         return (
                                 <div className='item' key={el.id}>
-                                    <CardAdmin img={el.img} product={el.product} price={el.price} stock={el.quantity} />
+                                    <CardAdmin id={el.id} img={el.img} product={el.product} price={el.price} stock={el.quantity} />
                                 </div>
                         )
                     }) :    
