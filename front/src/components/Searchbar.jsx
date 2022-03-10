@@ -7,9 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 function Searchbar() {
     const [input, setInput] = useState('')
+    //eslint-disable-next-line
+    const [category, setCategory] = useState([])
     const dispatch = useDispatch()
     const categories = useSelector(state => state.categories)
 
+    function handleCategoryFilter(e) {
+        setCategory(...input, e.target.value)
+    }
+    
     function handleInputChange(e) {
         setInput(e.target.value)
     }
@@ -57,7 +63,7 @@ function Searchbar() {
                                         <div key={el.id}>
                                             <label>
                                                 {el.name.toUpperCase()}
-                                                <input value={el.name} type='checkbox'/>
+                                                <input onClick={handleCategoryFilter} value={el.name} type='checkbox'/>
                                             </label>
                                         </div>        
                                     )

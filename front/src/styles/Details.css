@@ -76,6 +76,9 @@
         padding-bottom: 20px;
         
     }
+    .btn__volver img {
+        margin: 10px;
+    }
 }
 
 @media screen and (min-width: 951px) {

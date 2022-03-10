@@ -30,10 +30,11 @@
 
 @media screen and (max-width: 390px) {
     .card__container {
-        width: 150px;
+        width: 140px;
         margin: 7px;
         height: auto;
         margin-top: 15px;
+        font-size: 10px;
     }
 
     .card__container .item-name-card h3 {
@@ -42,7 +43,7 @@
 
     .card__container .img__card {
         height: 170px;
-        width: 150px;
+        width: 140px;
         object-fit: cover;
     }
     .h4-card {

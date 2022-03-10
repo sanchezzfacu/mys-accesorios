@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import volver from '../img/volver-icon.png'
 import '../styles/Details.css'
 
 function Details() {
@@ -23,7 +22,7 @@ function Details() {
     return (
         <div className='container__details__route'>
                 <Navbar/>
-            <a className='btn__volver' href="/home"><button className='btn__inicio' ><FontAwesomeIcon icon="fa-solid fa-arrow-left" /></button></a>
+            <a className='btn__volver' href="/home"><img src={volver} alt="" /></a>
             {
                 product ? product.map(el => {
                     return (
@@ -36,7 +35,11 @@ function Details() {
                                     <h2 className='product'>{el.product}</h2>
                                     <h3 className='description'>{el.description}</h3>
                                     <h2 className='price'>${el.price}</h2>
-                                    <a href={wpp} target='_blank' rel="noopener noreferrer" ><button className='btn__comprar'>Comprar</button></a>
+                                    <a href={wpp} target='_blank' rel="noopener noreferrer" >
+                                        <button className='btn__comprar'>
+                                            Comprar
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                             <div className='footer-container'>
