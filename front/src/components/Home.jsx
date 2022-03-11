@@ -6,6 +6,7 @@ import Navbar from './Navbar'
 import Card from './Card'
 import Footer from './Footer'
 import '../styles/Home.css'
+import SpinnerLoading from './SpinnerLoading'
 function Home() {
     const dispatch = useDispatch()
     const products = useSelector(state => state.products)
@@ -32,7 +33,9 @@ function Home() {
                         </div>
                     )
                 }) :
-                <div/> 
+                <div>
+                    <SpinnerLoading/>
+                </div>
                 // <Spinner animation="border" role="status">
                 //     <span className="visually-hidden">Loading...</span>
                 // </Spinner>
