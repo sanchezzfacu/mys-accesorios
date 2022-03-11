@@ -2,12 +2,27 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-const {DB_USER, DB_PASSWORD, DB_HOST,} = process.env;
+const {DB_USER, DB_PASSWORD, DB_HOST, DB_NAME} = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/inventario`, {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-});
+if (process.env.DATABASE_URL) {
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
+    protocol: 'postgres',
+    logging:  true //false
+  });
+} else {
+  // the application is executed on the local machine
+  sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, {
+    logging: false, // set to console.log to see the raw SQL queries
+    native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  });
+}
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -32,8 +47,8 @@ const { Categories, Product } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
-Categories.belongsToMany(Product, {through: "categories_product"});
 Product.belongsToMany(Categories, {through: "categories_product"})
+Categories.belongsToMany(Product, {through: "categories_product"});
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
