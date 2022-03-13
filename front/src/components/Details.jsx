@@ -22,11 +22,11 @@ function Details() {
     return (
         <div className='container__details__route'>
                 <Navbar/>
-            <a className='btn__volver' href="/home"><img src={volver} alt="" /></a>
+            <a className='btn__volver' href="/"><img src={volver} alt="" /></a>
             {
                 product ? product.map(el => {
                     return (
-                        <div className='content-height' key={el.id}>
+                        <div key={el.id}>
                             <div className='container__details__items'>
                                 <div className='img__details'>
                                     <img src={el.img} alt="Imagen no encontrada" height="400px"/>

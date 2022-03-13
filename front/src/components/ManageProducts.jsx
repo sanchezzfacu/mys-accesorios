@@ -2,6 +2,8 @@ import React, { useEffect , useState} from 'react'
 import { getProducts, getProductByName } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import CardAdmin from './CardAdmin'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import '../styles/ManageProducts.css'
 
 function ManageProducts() {
@@ -30,8 +32,9 @@ function ManageProducts() {
                     <input
                         type='text'
                         onChange={handleInput}
+                        placeholder='Buscar producto'
                     />
-                    <button>Buscar</button>
+                    <button><FontAwesomeIcon className='btn-search' icon={faSearch}/></button>
                 </form>
             <div className='item-container'>  
                 {
@@ -44,6 +47,10 @@ function ManageProducts() {
                     }) :    
                     <div/>
                 }
+            </div>
+            <div className="btn-volver">
+                <a href="/"><button>Pagina principal</button></a>
+                <a href="/paneladmin"><button>Menu administrador</button></a>
             </div>
         </div>
     )

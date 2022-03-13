@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createCategory } from '../redux/actions'
+import '../styles/CrearCategoria.css'
 
 function CrearCategoria() {
     const dispatch = useDispatch()
@@ -25,7 +26,7 @@ function CrearCategoria() {
     }
 
     return (
-        <div>
+        <div className='crear-categoria-container'>
             <form onSubmit={handleSubmit}>
                 <input
                     name="name"
@@ -37,6 +38,10 @@ function CrearCategoria() {
                     Crear
                 </button>
             </form>
+            <div className="btn-volver">
+                <a href="/"><button>Página principal</button></a>
+                <a href="/"><button>Menú administrador</button></a>
+            </div>
         </div>
     )
 }

@@ -10,7 +10,7 @@ function Navbar() {
     return (
         <nav className='nav-bar'>
             <ul className='nav-ul'>
-                <li className='nav-li'><a href="/home"><img className='logo__nav' src={logo} height="60px" alt=""/></a></li>
+                <li className='nav-li'><a href="/"><img className='logo__nav' src={logo} height="60px" alt=""/></a></li>
                 <li className='nav-li'><a href={url} target='_blank' rel='noreferrer' >Contacto</a></li>
                 <li className='nav-li'><a href="/direccion">Direccion</a></li>
                 <li className='nav-li'><a href="/redes">Redes sociales</a></li>

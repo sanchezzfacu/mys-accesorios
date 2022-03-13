@@ -3,4 +3,23 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+.panel-admin-items {
+    margin-top: 20px;
+}
+.panel-admin-items a {
+    margin: 10px;
+}
+.panel-admin-items button {
+    background-color: #9ee6e0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transition: all ease 0.3s;
+}
+.panel-admin-items button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

@@ -6,6 +6,9 @@ import '../styles/Redes.css'
 function Redes() {
     return (
         <div className='redes-container'>
+            <div className="btn-volver">
+                <a href="/"><button>Volver a inicio</button></a>
+            </div>
             <div>
                 <h1 className='redes-header'>Seguinos en nuestras redes sociales y no te pierdas nuestras ofertas</h1>
             </div>

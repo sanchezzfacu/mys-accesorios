@@ -111,10 +111,11 @@ function CrearProducto() {
                 <br/>
 
                 <select onChange={handleSelect}>
+                    <option value={null}>Seleccionar categorias</option>
                     {
                         categories.map(el => {
                             return (
-                                <option key={el.id} value={el.name} >{el.name.toUpperCase()}</option>
+                                <option key={el.id} value={el.name} >{el.name}</option>
                             )
                         })
                     }
@@ -123,7 +124,10 @@ function CrearProducto() {
 
                 <button>Publicar</button>
             </form>
-            <a href="/home"><button>Inicio</button></a>
+            <div className="btn-volver">
+                <a href="/"><button>Pagina principal</button></a>
+                <a href="/paneladmin"><button>Menu administrador</button></a>
+            </div>  
         </div>
     )
 }

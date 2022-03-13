@@ -6,7 +6,7 @@ function PageNotFound() {
         <div className='error__container'>
             <h1>Error, página no encontrada</h1>
             <button className='btn-error'>
-                <a href='/home'>
+                <a href='/'>
                     Volver a inicio
                 </a>
             </button>
