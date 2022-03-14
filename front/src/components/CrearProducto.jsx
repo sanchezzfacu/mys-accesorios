@@ -43,6 +43,10 @@ function CrearProducto() {
         })
     }
 
+    function handleDeleteCategories(el){  
+        setInput({...input, category: input.category.filter(cat => cat !== el)})
+       }
+
     useEffect(() => {
         dispatch(getCategories())
     },[dispatch])
@@ -120,9 +124,18 @@ function CrearProducto() {
                         })
                     }
                 </select>
+                    <div className='container-category-selected'>
+                      {input.category.map(el =>  
+                        <div 
+                            className='category-selected'
+                            key={el.id}
+                            onClick={()=>handleDeleteCategories(el)}>{el}<button className='btn-delete-category' key={el.id}>x</button>
+                        </div>
+                      )}
+                    </div>
                 <br/>
 
-                <button>Publicar</button>
+                <button className='btn-publicar'>Publicar</button>
             </form>
             <div className="btn-volver">
                 <a href="/"><button>Pagina principal</button></a>

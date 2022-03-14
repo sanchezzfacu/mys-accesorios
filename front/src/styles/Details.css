@@ -110,8 +110,13 @@
         justify-content: center;
         height: 35px;
         width: 80%;
-        border: 1px solid #000000;
+        border: 0.1px solid #000000;
         border-radius: 10px;
+        transition: all ease 0.4s;
+    }
+    .btn__comprar:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: none;
     }
     .product, .price, .description {
         margin: 25px;
@@ -127,9 +132,11 @@
         background-color: #84DFDF;
         padding: 10px;
         border-radius: 50%;
-        transition: all ease 0.3s;
+        transition: all ease 0.4s;
+        border: 1px solid #000000b9;
     }
     .btn__volver:hover { 
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: none;
     }
 }

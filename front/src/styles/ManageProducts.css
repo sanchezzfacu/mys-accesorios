@@ -4,8 +4,6 @@
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    margin-left: 150px;
-    margin-right: 150px;
 }
 
 .item {
@@ -33,11 +31,11 @@
     padding-left: 10px;
 }
 
-
 .manage-container form button {
     border: 1px solid #000;
     border-left: none;
     border-radius: 0px 10px 10px 0px;
+    height: 30px;
 }
 .btn-volver{
     display: flex;

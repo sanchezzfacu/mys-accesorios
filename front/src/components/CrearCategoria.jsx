@@ -40,7 +40,7 @@ function CrearCategoria() {
             </form>
             <div className="btn-volver">
                 <a href="/"><button>Página principal</button></a>
-                <a href="/"><button>Menú administrador</button></a>
+                <a href="/paneladmin"><button>Menú administrador</button></a>
             </div>
         </div>
     )
