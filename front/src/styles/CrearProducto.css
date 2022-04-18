@@ -54,3 +54,7 @@ form .btn-publicar {
 .container-category-selected {
     margin: 10px;
 }
+
+select {
+    outline: none;
+}

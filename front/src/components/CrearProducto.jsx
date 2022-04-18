@@ -23,9 +23,7 @@ function CrearProducto() {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()
         dispatch(createProduct(input))
-        alert('Producto creado')
         setInput({
             product: "",
             img: "",
@@ -126,16 +124,15 @@ function CrearProducto() {
                 </select>
                     <div className='container-category-selected'>
                       {input.category.map(el =>  
-                        <div 
+                        <div key={el.id}
                             className='category-selected'
-                            key={el.id}
                             onClick={()=>handleDeleteCategories(el)}>{el}<button className='btn-delete-category' key={el.id}>x</button>
                         </div>
                       )}
                     </div>
                 <br/>
 
-                <button className='btn-publicar'>Publicar</button>
+                <button className='btn-publicar' >Publicar</button>
             </form>
             <div className="btn-volver">
                 <a href="/"><button>Pagina principal</button></a>
