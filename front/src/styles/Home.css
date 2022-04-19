@@ -45,3 +45,15 @@ a:hover {
     justify-content: center;
     align-items: flex-end;
 }
+
+.spinner-container {
+    height: 58vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    height: 150px;
+    width: 150px;
+}    
