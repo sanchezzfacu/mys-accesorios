@@ -29,7 +29,7 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 404px) {
     .card__container {
         width: 140px;
         margin: 7px;

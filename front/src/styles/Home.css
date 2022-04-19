@@ -47,7 +47,7 @@ a:hover {
 }
 
 .spinner-container {
-    height: 58vh;
+    height: calc(70vh - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
