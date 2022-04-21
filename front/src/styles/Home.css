@@ -7,7 +7,13 @@
 
 body {
     background: linear-gradient(#c9f0e4, #a0b5eb);
-    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.container-home {
+    height: 100vh;
+    background-size: calc(100vh - 90px);
+
 }
 
 a:hover {
@@ -37,13 +43,6 @@ a:hover {
         padding-right: 120px;   
         justify-content: center;
     }
-}
-
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 .spinner-container {
