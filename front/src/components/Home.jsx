@@ -14,7 +14,7 @@ function Home() {
 
     useEffect(() => {
         dispatch(getProducts())
-        document.title = 'MyS accesorios'
+        document.title = 'MyS Accesorios'
     },[dispatch])
 
     return (
@@ -31,8 +31,7 @@ function Home() {
                             </a>
                         </div>
                     )
-                })
-                 :
+                })  :
 
                 <div className='spinner-container'>
                     <Spinner className='spinner' animation="border" role="status">
