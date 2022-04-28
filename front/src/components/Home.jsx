@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../redux/actions'
 import Searchbar from './Searchbar'
@@ -11,8 +11,6 @@ import '../styles/Home.css'
 function Home() {
     const dispatch = useDispatch()
     const products = useSelector(state => state.products)
-// eslint-disable-next-line
-    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         dispatch(getProducts())
@@ -25,7 +23,7 @@ function Home() {
             <Searchbar/>
             <div className='align__card'>
             {
-                products.length > 2 ? products.map(el => {
+                products.length ? products.map(el => {
                     return (
                         <div className='card__home' key={el.id}>
                             <a href={'/details/'+ el.id}>
@@ -33,7 +31,9 @@ function Home() {
                             </a>
                         </div>
                     )
-                }) :
+                })
+                 :
+
                 <div className='spinner-container'>
                     <Spinner className='spinner' animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>

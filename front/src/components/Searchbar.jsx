@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getCategories, getProductByName } from '../redux/actions'
+import { getCategories, getProductByName, filterProducts } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import '../styles/Searchbar.css' 
 import filter from '../img/filter.png'
@@ -13,7 +13,10 @@ function Searchbar() {
     const categories = useSelector(state => state.categories)
 
     function handleCategoryFilter(e) {
-        setCategory(...input, e.target.value)
+        if(e.target.checked) {
+            setCategory(category.concat(e.target.value))
+        } 
+        else setCategory(category.filter(el => el !== e.target.value))
     }
     
     function handleInputChange(e) {
@@ -25,6 +28,10 @@ function Searchbar() {
         dispatch(getProductByName(input))
     }
     
+    function filterInformation(e) {
+        dispatch(filterProducts(category))
+    }
+
     useEffect(() => {
         dispatch(getCategories())
     }, [dispatch])
@@ -63,7 +70,7 @@ function Searchbar() {
                                         <div key={el.id}>
                                             <label>
                                                 {el.name.toUpperCase()}
-                                                <input onClick={handleCategoryFilter} value={el.name} type='checkbox'/>
+                                                <input onChange={handleCategoryFilter} value={el.name} type='checkbox'/>
                                             </label>
                                         </div>        
                                     )
@@ -72,7 +79,7 @@ function Searchbar() {
                         </div>
                         <div className="modal-btn">
                             <a href="#filter"><button>Cancelar</button></a>
-                            <a href="#filter"><button>Aplicar</button></a>
+                            <a href="#filter"><button onClick={filterInformation}>Aplicar</button></a>
                         </div>
                     </div>
                 </div>      

@@ -70,3 +70,21 @@ export function deleteProduct(id) {
         return json
     }
 }
+
+export function filterProducts(payload) {
+    return async function(dispatch) {
+        const json = await axios.get(ALL_PRODUCTS)
+        let dataFiltered = []
+        for(let i = 0; i < payload.length; i++) {
+            for(let j = 0; j < json.data.length; j++) {
+                if(payload[i] === json.data[j].categories[0].name) {
+                    dataFiltered.push(json.data[j])
+                }
+            }
+        }
+        return dispatch({
+            type: 'FILTER_PRODUCTS',
+            payload: dataFiltered
+        })
+    }
+}
