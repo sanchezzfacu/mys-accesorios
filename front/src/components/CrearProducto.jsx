@@ -132,7 +132,7 @@ function CrearProducto() {
                     </div>
                 <br/>
 
-                <button className='btn-publicar' >Publicar</button>
+                <button className='btn-publicar' type='submit' >Publicar</button>
             </form>
             <div className="btn-volver">
                 <a href="/"><button>Pagina principal</button></a>
