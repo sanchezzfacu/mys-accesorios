@@ -3,7 +3,6 @@
 @media screen and (max-width: 500px) {
     .card__container {
         width: 180px;
-        min-height: 320px;
         margin: 7px;
         box-sizing: border-box;
     }   
