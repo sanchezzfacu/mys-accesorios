@@ -1,5 +1,4 @@
 import React from 'react'
-import buyIcon from '../img/bag-buy.png'
 import '../styles/Card.css'
 
 
@@ -10,10 +9,14 @@ function Card({product, price, img}) {
             <div className="item-name-card">
                 <h3>{product.charAt(0).toUpperCase() + product.slice(1).toLowerCase()}</h3>
             </div>
+            <h4 className='h4-card'>${price}</h4>
+            <hr></hr>
             <div className='lower-items-card'>
-                <h4 className='h4-card'>${price}</h4>
-                <button className='btn-card'>
-                    <img src={buyIcon} alt="" />
+                <button className='btn-card btn-details'>
+                    Detalles
+                </button>
+                <button className='btn-card btn-buy'>
+                    Comprar
                 </button>
             </div>
         </div>

@@ -18,6 +18,7 @@ function Details() {
     
     useEffect(() => {
         dispatch(getDetails(id))
+        document.title = 'MyS Accesorios'
     },[id, dispatch])
     
     return (

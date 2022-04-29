@@ -23,10 +23,18 @@ export function getProducts() {
 export function getProductByName(name) {
     return async function(dispatch) {
         let json = await axios.get(PRODUCT_BY_NAME + name)
-        return dispatch({
-            type: 'GET_PRODUCT_BY_NAME',
-            payload: json.data
-        })
+        if(json.data.length) {
+            return dispatch({
+                type: 'GET_PRODUCT_BY_NAME',
+                payload: json.data
+            })
+        }
+        else if(json.status !== 200) {
+            return dispatch({
+                type: 'GET_PRODUCT_BY_NAME',
+                payload: json.data
+            })
+        }
     }
 }
 

@@ -39,7 +39,7 @@ function Searchbar() {
     return (
         <div className='searchbar'>
             <input 
-            placeholder='Buscar producto...'
+                placeholder='Buscar producto...'
                 type='text'
                 onChange={handleInputChange}
                 spellCheck="false"
