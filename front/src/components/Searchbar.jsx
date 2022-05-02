@@ -15,7 +15,7 @@ function Searchbar() {
     function handleCategoryFilter(e) {
         if(e.target.checked) {
             setCategory(category.concat(e.target.value))
-        } 
+        }
         else setCategory(category.filter(el => el !== e.target.value))
     }
     

@@ -18,24 +18,23 @@
     }
 
     .card__container .item-name-card h3 {
-        font-size: 18px;
+        font-size: 17px;
     }
     .card__container button {
         margin-bottom: 15px;
     }
 }
 
-@media screen and (max-width: 404px) {
+@media screen and (min-width: 300px) and (max-width: 404px) {
     .card__container {
         width: 140px;
         margin: 7px;
         height: auto;
         margin-top: 15px;
-        font-size: 5px;
     }
 
     .card__container .item-name-card h3 {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .card__container .img__card {
@@ -45,6 +44,18 @@
     }
     .h4-card {
         height: 30px;
+    }
+    .card__container button {
+        width: 50px;
+        font-size: 13px;
+    }
+    .card__container .btn-buy a{
+        color: #fff;
+    }
+    .lower-items-card {
+        display: flex;
+        gap: 3px;
+        margin: 5px
     }
 }
 
@@ -69,6 +80,10 @@
 
     .card__container .item-name-card h3 {
         font-size: 17px;
+    }
+    .card__container button {
+        height: 36px;
+        width: 75px;
     }
 }
 
@@ -101,6 +116,7 @@
 .card__container h4 {
     color: #444444;
     font-weight: 600;
+    margin-bottom: 0px;
 }
 
 .card__container img {
@@ -118,7 +134,10 @@
 
 .card__container .btn-buy {
     background: #28a745;
-    padding: 2px;
+}
+
+.card__container .btn-buy a {
+    color: #fff;
 }
 
 .card__container .btn-details {
@@ -127,4 +146,8 @@
 }
 .card__container button img {
     color: #fff;
+}
+
+hr {
+    margin: 10px;
 }
