@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import volver from '../img/volver-icon.png'
+import cart from '../img/cart.png'
 import '../styles/Details.css'
 
 function Details() {
@@ -34,14 +35,15 @@ function Details() {
                                     <img src={el.img} alt="Imagen no encontrada" height="400px"/>
                                 </div>
                                 <div className='detail__items'>
-                                    <h2 className='product'>{el.product}</h2>
+                                    <h2 className='product'>{el.product.charAt(0).toUpperCase() + el.product.slice(1).toLowerCase()}</h2>
                                     <h3 className='description'>{el.description}</h3>
                                     <h2 className='price'>${el.price}</h2>
-                                    <a href={wpp} target='_blank' rel="noopener noreferrer" >
-                                        <button className='btn__comprar'>
+                                    <button className='btn__comprar'>
+                                        <a href={wpp} target='_blank' rel="noopener noreferrer" >
                                             Comprar
-                                        </button>
-                                    </a>
+                                            <img src={cart} alt='' height='15px'/>
+                                        </a>
+                                    </button>
                                 </div>
                             </div>
                             <div className='footer-container'>

@@ -26,9 +26,7 @@ function Home() {
                 products.length ? products.map(el => {
                     return (
                         <div className='card__home' key={el.id}>
-                            <a href={'/details/'+ el.id}>
                                 <Card img={el.img} product={el.product} price={el.price} stock={el.quantity} id={el.id}/>
-                            </a>
                         </div>
                     )
                 })  :

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../img/logo.png'
-// import menubutton from '../img/menubutton.png'
+import menu from '../img/menu.png'
 import '../styles/Navbar.css'
 
 function Navbar() {
@@ -8,21 +8,19 @@ function Navbar() {
     const [url, setUrl] = useState('https://wa.me/543876396788?text=Hola%20estoy%20interesada%20en%20uno%20de%20sus%20productos,%20me%20das%20informacion?') 
 
     return (
-        <nav className='nav-bar'>
+        <nav className='nav'>
+            <input type="checkbox" id="check"/>
+            <div className='logo-container'>
+                <li className='nav-li nav-logo'><a href="/"><img className='logo__nav' src={logo} alt=""/></a></li>
+            </div>
+            <label className='btn-menu' htmlFor='check'>
+                <img src={menu} alt="" height='60px' />
+            </label>
             <ul className='nav-ul'>
-                <li className='nav-li'><a href="/"><img className='logo__nav' src={logo} height="60px" alt=""/></a></li>
-                <li className='nav-li'><a href={url} target='_blank' rel='noreferrer' >Contacto</a></li>
-                <li className='nav-li'><a href="/direccion">Direccion</a></li>
-                <li className='nav-li'><a href="/redes">Redes sociales</a></li>
+                    <li className='nav-li'><a href="/direccion">DIRECCION</a></li>
+                    <li className='nav-li'><a href={url} target='_blank' rel='noreferrer' >CONTACTANOS</a></li>
+                    <li className='nav-li'><a href="/redes">NUESTRAS REDES</a></li>
             </ul>
-            {/* <ul className='nav-responsive-ul'>
-                <div className='nav-responsive-button'><img src={menubutton} alt="" height='30px' /></div>
-                <div className='nav-li-container'>
-                    <li className='nav-responsive-li'><a href={url} target='_blank' rel='noreferrer' >Contacto</a></li>
-                    <li className='nav-responsive-li'><a href="/direccion">Direccion</a></li>
-                    <li className='nav-responsive-li'><a href="/redes">Redes sociales</a></li>
-                </div>
-            </ul> */}
         </nav> 
     )
 }

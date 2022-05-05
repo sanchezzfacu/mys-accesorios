@@ -16,11 +16,13 @@ function Card({product, price, img, id}) {
             <hr></hr>
             <div className='lower-items-card'>
                 <button className='btn-card btn-details'>
-                    Detalles
+                    <a href={'/details/'+ id}>
+                        Detalles
+                    </a>
                 </button>
                 <button className='btn-card btn-buy'>
                     <a href={wpp} target='_blank' rel='noreferrer'>
-                    Comprar
+                        Comprar
                     </a>
                 </button>
             </div>

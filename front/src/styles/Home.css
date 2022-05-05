@@ -9,11 +9,8 @@
 }
 
 body {
-    /* background: linear-gradient(160deg, #2c03b4, #6d0977); */
-    background: #ebe8e8;
     background: linear-gradient(160deg, #c9f0e4, #a0b5eb);
     background-attachment: fixed;
-
 }
 
 .container-home {

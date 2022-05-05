@@ -133,7 +133,7 @@
         flex-direction: column;
         padding-left: 150px;
     }
-    label {
+    .details-item label {
         height: 30px;
     }
 }
