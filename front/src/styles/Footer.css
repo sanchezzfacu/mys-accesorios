@@ -1,12 +1,13 @@
 footer {
     background-color: #84DFDF;
-    height: 70px;
+    height: 150px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     align-self: flex-end;
-    margin-top: 150px;
+    margin-top: 100px;
     box-shadow: 1px 1px 7px #000000;
 }
 
@@ -14,15 +15,15 @@ footer {
     margin: 10px;
 } 
 
-.img-footer {
-    height: 30px;
-}
-
-.fb__item {
-    background-color: #fff;
-    border-radius: 2px;
+.social-media-container a {
+    height: 50px;
 }
 
 .footer-span {
     text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.social-media-container a img {
+    height: 50px;
 }

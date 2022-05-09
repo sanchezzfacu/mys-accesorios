@@ -25,7 +25,9 @@ function Details() {
     return (
         <div className='container__details__route'>
                 <Navbar/>
-            <a className='btn__volver' href="/"><img src={volver} alt="" /></a>
+                <div className='container-btn-volver'>
+                    <a className='btn__volver' href="/"><img src={volver} alt="" /></a>
+                </div>
             {
                 productDetail.map(el => {
                     return (
@@ -38,12 +40,12 @@ function Details() {
                                     <h2 className='product'>{el.product.charAt(0).toUpperCase() + el.product.slice(1).toLowerCase()}</h2>
                                     <h3 className='description'>{el.description}</h3>
                                     <h2 className='price'>${el.price}</h2>
-                                    <button className='btn__comprar'>
                                         <a href={wpp} target='_blank' rel="noopener noreferrer" >
-                                            Comprar
+                                            <button className='btn__comprar'>
+                                            COMPRAR
                                             <img src={cart} alt='' height='15px'/>
+                                            </button>
                                         </a>
-                                    </button>
                                 </div>
                             </div>
                             <div className='footer-container'>

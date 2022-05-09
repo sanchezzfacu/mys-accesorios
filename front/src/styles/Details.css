@@ -1,5 +1,20 @@
 .container__details__route {
-    background: linear-gradient(#c9f0e4, #a0b5eb);
+    background: linear-gradient(160deg, #c9f0e4, #a0b5eb);
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+.btn__comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 @media screen and (min-width: 300px) and (max-width: 950px) {
@@ -28,7 +43,6 @@
         width: 50px;
         background-color: #84DFDF;
         border: 1px solid #000000;
-        font-weight: 900;
         cursor: pointer;
     }
 
@@ -37,9 +51,9 @@
         width: 100%;
         background-color: #84DFDF;
         border: 1px solid #000000;
-        font-weight: 900;
+        font-weight: 600;
         cursor: pointer;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     .detail__items {
@@ -73,17 +87,21 @@
         padding-bottom: 3px;
     }    
 
+    .container-btn-volver {
+        width: 100%;
+        margin-top: 12px;
+    }
+
     .btn__volver {
         padding: 12px 7px;
         background-color: #84DFDF;
         border-radius: 50%;
         transition: all ease 0.4s;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border: none;
         margin: 20px 10px;
+        border: 1px solid rgb(130, 130, 130);
     }
     .btn__comprar:hover {
-        background-color: #6cbcbc;
+        box-shadow: #00000059 0px 0px 10px 2px;
     }
 }
 
@@ -123,9 +141,10 @@
         justify-content: center;
         height: 35px;
         width: 80%;
-        border-radius: 10px;
+        border-radius: 5px;
         border: 0.1px solid #000000;
         box-shadow: none;
+        font-weight: 600;
     }
     .btn__comprar:hover {
         transition: all ease 0.4s;
@@ -142,10 +161,13 @@
         width: 80%;
         font-size: 20px;
     }
+
+    .container-btn-volver {
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
     .btn__volver {
-        position: absolute;
-        left: 50px;
-        top: 90px;
         background-color: #84DFDF;
         padding: 10px;
         border-radius: 50%;
