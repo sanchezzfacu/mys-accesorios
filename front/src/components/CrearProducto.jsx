@@ -114,22 +114,20 @@ function CrearProducto() {
 
                 <select onChange={handleSelect}>
                     <option value={null}>Seleccionar categorias</option>
-                    {
-                        categories.map(el => {
+                    {categories.map(el => {
                             return (
                                 <option key={el.id} value={el.name} >{el.name}</option>
                             )
-                        })
-                    }
+                    })}
                 </select>
-                    <div className='container-category-selected'>
-                      {input.category.map(el =>  
-                        <div key={el.id}
-                            className='category-selected'
-                            onClick={()=>handleDeleteCategories(el)}>{el}<button className='btn-delete-category' key={el.id}>x</button>
+                    {input.category.map(el =>  
+                        <div key={el} className='container-category-selected' >
+                                <span className='category-selected' onClick={()=>handleDeleteCategories(el)} >
+                                    {el}
+                                    <button className='btn-delete-category'>x</button>
+                                </span>
                         </div>
-                      )}
-                    </div>
+                    )}
                 <br/>
 
                 <button className='btn-publicar' type='submit' >Publicar</button>
