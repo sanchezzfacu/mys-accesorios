@@ -15,7 +15,7 @@ function ManageProducts() {
 
     useEffect(() => {
         dispatch(getProducts())
-    }, [dispatch])
+    }, [dispatch, products])
 
     function handleInput(e) {
         setInput(e.target.value)

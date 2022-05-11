@@ -9,7 +9,6 @@ function CardAdmin({id, product, price, img, stock}) {
 
     const handleDeleteProduct = (e) => {
         dispatch(deleteProduct(e.target.value))
-        window.location.reload()
     }
 
     return (
