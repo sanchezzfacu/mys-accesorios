@@ -38,7 +38,7 @@ function Details() {
                                 </div>
                                 <div className='detail__items'>
                                     <h2 className='product'>{el.product.charAt(0).toUpperCase() + el.product.slice(1).toLowerCase()}</h2>
-                                    <h3 className='description'>{el.description}</h3>
+                                    <h3 className='description'>{el.description.charAt(0).toUpperCase() + el.description.slice(1).toLowerCase()}</h3>
                                     <h2 className='price'>${el.price}</h2>
                                         <a href={wpp} target='_blank' rel="noopener noreferrer" >
                                             <button className='btn__comprar'>
