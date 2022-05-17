@@ -36,7 +36,7 @@
     }
 
     .card__container .item-name-card h3 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .card__container .img__card {
@@ -45,7 +45,7 @@
         object-fit: cover;
     }
     .h4-card {
-        height: 30px;
+        height: 23px;
     }
     .card__container button {
         width: 50px;
@@ -57,7 +57,11 @@
     .lower-items-card {
         display: flex;
         gap: 3px;
-        margin: 5px
+        margin: 5px;
+        margin-bottom: -5px;
+    }
+    .card__container h3 {
+        padding-left: 10px;
     }
 }
 
