@@ -97,6 +97,7 @@ function CrearProducto() {
                     onChange={handleInputChange}
                     required
                     spellCheck='false'
+                    type="number"
                 />
                 
                 <br/>
