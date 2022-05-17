@@ -10,8 +10,8 @@ function CrearProducto() {
         product: "",
         img: "",
         price: "",
-        quantity: "",
-        description: "",
+        quantity: Number(""),
+        description: Number(""),
         category: []
     })
 
@@ -79,7 +79,7 @@ function CrearProducto() {
                 <label>Stock</label>
                 <input
                     placeholder='Stock..'
-                    value={input.quantity}
+                    value={Number(input.quantity)}
                     type="number"
                     name="quantity"
                     onChange={handleInputChange}
@@ -92,7 +92,7 @@ function CrearProducto() {
                 <label>Precio</label>
                 <input
                     placeholder='Precio..'
-                    value={input.price}
+                    value={Number(input.price)}
                     name="price"
                     onChange={handleInputChange}
                     required
