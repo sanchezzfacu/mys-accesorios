@@ -15,16 +15,16 @@ function Card({product, price, img, id}) {
             <h4 className='h4-card'>${price}</h4>
             <hr></hr>
             <div className='lower-items-card'>
-                <button className='btn-card btn-details'>
-                    <a href={'/details/'+ id}>
+                <a className='linkto-details' href={'/details/'+ id}>
+                    <button className='btn-card btn-details'>
                         Detalles
-                    </a>
-                </button>
-                <button className='btn-card btn-buy'>
-                    <a href={wpp} target='_blank' rel='noreferrer'>
+                    </button>
+                </a>
+                <a className='linkto-wpp' href={wpp} target='_blank' rel='noreferrer'>
+                    <button className='btn-card btn-buy'>
                         Comprar
-                    </a>
-                </button>
+                    </button>
+                </a>
             </div>
         </div>
     )

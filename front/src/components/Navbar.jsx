@@ -12,6 +12,7 @@ function Navbar() {
             <input type="checkbox" id="check"/>
             <div className='logo-container'>
                 <li className='nav-li nav-logo'><a href="/"><img className='logo__nav' src={logo} alt=""/></a></li>
+                <li className='page-name'>MyS Accesorios</li>
             </div>
             <label className='btn-menu' htmlFor='check'>
                 <img src={menu} alt="" height='60px' />

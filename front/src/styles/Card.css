@@ -128,7 +128,6 @@
 .card__container button {
     height: 36px;
     width: 75px;
-    color: #fff;
     border: 1px solid #000000;
     border-radius: 3px;
 }
@@ -136,18 +135,20 @@
 .card__container .btn-buy {
     background: #28a745;
     transition: all ease 0.3s;
-}
-
-.card__container .btn-buy a {
     color: #fff;
 }
 
-.card__container .btn-details a {
+.card__container .linkto-details  {
+    color:  #007bff;
+}
+
+.card__container .linkto-details {
     color: #007bff ;
 }
 
-.card__container .btn-details {
+.card__container .linkto-details button {
     border: 1px solid #007bff;
+    color:  #007bff;;
 }
 .card__container button img {
     color: #fff;
