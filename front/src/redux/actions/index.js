@@ -83,12 +83,13 @@ export function filterProducts(payload) {
     return async function(dispatch) {
         const json = await axios.get(ALL_PRODUCTS)
         let dataFiltered = []
-        for(let i = 0; i < payload.length; i++) {
-            for(let j = 0; j < json.data.length; j++) {
-                if(payload[i] === json.data[j].categories[0].name) {
-                    dataFiltered.push(json.data[j])
-                }
-            }
+        let filterParams = payload.toString()
+        let products = json.data
+        console.log(filterParams)
+        let includesCategory = (el => filterParams.includes(el.name))
+
+        for(let i = 0; i < products.length; i++) {
+            if(products[i].categories.some(includesCategory)) dataFiltered.push(products[i])
         }
         return dispatch({
             type: 'FILTER_PRODUCTS',

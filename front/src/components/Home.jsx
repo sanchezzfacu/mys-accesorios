@@ -15,7 +15,7 @@ function Home() {
     useEffect(() => {
         dispatch(getProducts())
         document.title = 'MyS Accesorios'
-    },[dispatch], products)
+    },[dispatch])
 
     return (
         <div className='container-home'>
