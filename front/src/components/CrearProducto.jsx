@@ -24,14 +24,7 @@ function CrearProducto() {
 
     function handleSubmit(e) {
         dispatch(createProduct(input))
-        setInput({
-            product: "",
-            img: "",
-            price: "",
-            quantity: "",
-            description: "",
-            category: []
-        })
+        window.location.href = 'https://myaccesorios.com/publicar'
     }
 
     function handleSelect(e) {
