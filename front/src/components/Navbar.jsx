@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import logo from '../img/logo.png'
 import menu from '../img/menu.png'
+import LoginButton from './LoginButton'
+import LogoutButton from './LogoutButton'
 import '../styles/Navbar.css'
+import { useAuth0 } from '@auth0/auth0-react'
 
 function Navbar() {
     // eslint-disable-next-line
     const [url, setUrl] = useState('https://wa.me/543876396788?text=Hola%20estoy%20interesada%20en%20uno%20de%20sus%20productos,%20me%20das%20informacion?') 
+    const { isAuthenticated } = useAuth0()
 
     return (
         <nav className='nav'>
@@ -21,6 +25,12 @@ function Navbar() {
                     <li className='nav-li'><a href="/direccion">DIRECCION</a></li>
                     <li className='nav-li'><a href={url} target='_blank' rel='noreferrer' >CONTACTANOS</a></li>
                     <li className='nav-li'><a href="/redes">NUESTRAS REDES</a></li>
+                    {
+                        isAuthenticated ? 
+                        <li className='nav-li'><LogoutButton/></li>
+                        :
+                        <li className='nav-li'><LoginButton/></li>
+                    }
             </ul>
         </nav> 
     )

@@ -9,6 +9,7 @@ import Direccion from './components/Direccion';
 import Redes from './components/Redes';
 import ManageProducts from './components/ManageProducts';
 import PageNotFound from './components/PageNotFound';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/administrarproductos" element={<ManageProducts/>}/>
         <Route path="/direccion" element={<Direccion/>}/>
         <Route path="/redes" element={<Redes/>}/>
+        <Route path="/perfil" element={<Profile/>}/>
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     </Router>
